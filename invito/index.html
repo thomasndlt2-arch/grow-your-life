@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Grow Your Life · Un invito / An invitation</title>
+<meta name="description" content="Un invito a far crescere il tuo giardino. An invitation to grow your garden.">
+<style>
+  :root { --paper: #f6f3ec; --ink: #2b2620; --soft: #6b6257; --moss: #414d33; --line: #ddd5c6; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+  h1, h2 { font-family: "New York", "Iowan Old Style", Georgia, serif; font-weight: 600; line-height: 1.25; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  h2 { font-size: 26px; margin: 36px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); }
+  p { margin: 0 0 12px; }
+  a { color: var(--moss); }
+  .lead, .hint { color: var(--soft); }
+  .lang { font-size: 15px; }
+  .box { background: #fffdf8; border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 20px 0; }
+  label { display: block; }
+  .code { display: block; width: 100%; border: 0; padding: 12px 0; background: transparent; color: var(--ink); font: 600 clamp(19px, 5.3vw, 32px)/1.5 ui-monospace, Menlo, monospace; border-radius: 4px; }
+  button, .store { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 20px; border: 1px solid var(--moss); border-radius: 10px; font: inherit; font-weight: 600; cursor: pointer; }
+  button { color: var(--moss); background: transparent; }
+  .store { color: #fffdf8; background: var(--moss); text-decoration: none; }
+  :focus-visible { outline: 3px solid var(--moss); outline-offset: 4px; }
+  .soon { opacity: .8; cursor: default; }
+  .status { margin: 12px 0 0; }
+  footer { color: var(--soft); font-size: 14px; margin-top: 56px; }
+</style>
+<script src="invite.js" defer></script>
+</head>
+<body>
+<main>
+  <h1>Grow Your Life</h1>
+  <p class="lead">Ogni parte della tua vita è una pianta del tuo giardino. · Every part of your life is a plant in your garden.</p>
+  <nav class="lang" aria-label="Lingua / Language"><a href="#it" data-language="it">Italiano</a> · <a href="#en" data-language="en">English</a></nav>
+
+  <section id="it" lang="it" aria-labelledby="title-it">
+    <h2 id="title-it">Un invito a far crescere il tuo giardino</h2>
+    <p id="visit-it" hidden>Hai già l’app? Apri il giardino dal pulsante qui sotto e porta le tue api. Vedrai piante e animali, mai temi e attività.</p>
+    <p>1. Installa Grow Your Life quando sarà disponibile sull’App Store.</p>
+    <p>2. Se qui compare un codice invito, inseriscilo nelle prime schermate (la Semina), oppure in Impostazioni ▸ Inviti nei primi 7 giorni di calendario, compreso il giorno in cui termini la Semina.</p>
+    <div class="box">
+      <div data-valid hidden>
+        <label for="code-it">Il tuo codice invito</label>
+        <input id="code-it" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-it">
+        <button type="button" data-copy="it">Copia codice</button>
+        <p id="hint-it" class="hint">Puoi anche tenere premuto sul codice per copiarlo. L’app ne verificherà la validità.</p>
+      </div>
+      <p data-fallback="it">Il codice non è visibile. Chiedi a chi ti ha invitato di inviarti anche il codice scritto.</p>
+      <p id="status-it" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <noscript><p>Per mostrare il codice del link serve JavaScript. Puoi comunque installare l’app e chiedere il codice a chi ti ha invitato.</p></noscript>
+    <p><span class="store soon">Prossimamente su App Store</span></p>
+    <p><a data-open-app hidden>Ho già l’app: apri Grow Your Life</a></p>
+    <p class="hint">Per visitare un giardino, dopo l’installazione riapri questo link e tocca «Ho già l’app: apri Grow Your Life». Il limite di 7 giorni riguarda solo il codice invito.</p>
+    <p><a href="../privacy/">Informativa sulla privacy</a> · <a href="../">Supporto</a></p>
+  </section>
+
+  <section id="en" lang="en" aria-labelledby="title-en">
+    <h2 id="title-en">An invitation to grow your garden</h2>
+    <p id="visit-en" hidden>Already have the app? Open the garden with the button below and bring your bees. You’ll see plants and animals, never themes or activities.</p>
+    <p>1. Install Grow Your Life when it becomes available on the App Store.</p>
+    <p>2. If an invitation code appears here, enter it during setup, or in Settings ▸ Invitations within the first 7 calendar days, including the day you finish setup.</p>
+    <div class="box">
+      <div data-valid hidden>
+        <label for="code-en">Your invitation code</label>
+        <input id="code-en" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-en">
+        <button type="button" data-copy="en">Copy code</button>
+        <p id="hint-en" class="hint">You can also touch and hold the code to copy it. The app will check whether it is valid.</p>
+      </div>
+      <p data-fallback="en">The code is not visible. Ask the person who invited you to send you the code as text too.</p>
+      <p id="status-en" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <noscript><p>JavaScript is needed to display the code from this link. You can still install the app and ask the person who invited you for the code.</p></noscript>
+    <p><span class="store soon">Coming soon on the App Store</span></p>
+    <p><a data-open-app hidden>Already installed: open Grow Your Life</a></p>
+    <p class="hint">To visit a garden, reopen this link after installation and tap “Already installed: open Grow Your Life”. The 7-day limit applies only to invitation codes.</p>
+    <p><a href="../privacy/#en">Privacy Policy</a> · <a href="../">Support</a></p>
+  </section>
+  <footer><p>Grow Your Life · Thomas Nadalet</p><p>Ultimo aggiornamento: 13 ottobre 2026 · Last updated: 13 October 2026</p></footer>
+</main>
+</body>
+</html>
