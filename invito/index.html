@@ -4,84 +4,160 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<title>Grow Your Life · Un invito / An invitation</title>
-<meta name="description" content="Un invito a far crescere il tuo giardino. An invitation to grow your garden.">
-<style>
-  :root { --paper: #f6f3ec; --ink: #2b2620; --soft: #6b6257; --moss: #414d33; --line: #ddd5c6; }
-  * { box-sizing: border-box; }
-  [hidden] { display: none !important; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
-  h1, h2 { font-family: "New York", "Iowan Old Style", Georgia, serif; font-weight: 600; line-height: 1.25; }
-  h1 { font-size: 34px; margin: 0 0 8px; }
-  h2 { font-size: 26px; margin: 36px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); }
-  p { margin: 0 0 12px; }
-  a { color: var(--moss); }
-  .lead, .hint { color: var(--soft); }
-  .lang { font-size: 15px; }
-  .box { background: #fffdf8; border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 20px 0; }
-  label { display: block; }
-  .code { display: block; width: 100%; border: 0; padding: 12px 0; background: transparent; color: var(--ink); font: 600 clamp(19px, 5.3vw, 32px)/1.5 ui-monospace, Menlo, monospace; border-radius: 4px; }
-  button, .store { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 20px; border: 1px solid var(--moss); border-radius: 10px; font: inherit; font-weight: 600; cursor: pointer; }
-  button { color: var(--moss); background: transparent; }
-  .store { color: #fffdf8; background: var(--moss); text-decoration: none; }
-  :focus-visible { outline: 3px solid var(--moss); outline-offset: 4px; }
-  .soon { opacity: .8; cursor: default; }
-  .status { margin: 12px 0 0; }
-  footer { color: var(--soft); font-size: 14px; margin-top: 56px; }
-</style>
+<title>Grow Your Life · Un invito</title>
+<meta name="description" content="Grow Your Life · Invito · Invitation · Invitación · Einladung · Convite">
+<link rel="stylesheet" href="../site.css">
 <script src="invite.js" defer></script>
 </head>
 <body>
-<main>
-  <h1>Grow Your Life</h1>
-  <p class="lead">Ogni parte della tua vita è una pianta del tuo giardino. · Every part of your life is a plant in your garden.</p>
-  <nav class="lang" aria-label="Lingua / Language"><a href="#it" data-language="it">Italiano</a> · <a href="#en" data-language="en">English</a></nav>
-
-  <section id="it" lang="it" aria-labelledby="title-it">
-    <h2 id="title-it">Un invito a far crescere il tuo giardino</h2>
-    <p id="visit-it" hidden>Hai già l’app? Apri il giardino dal pulsante qui sotto e porta le tue api. Vedrai piante e animali, mai temi e attività.</p>
-    <p>1. Installa Grow Your Life quando sarà disponibile sull’App Store.</p>
-    <p>2. Se qui compare un codice invito, inseriscilo nelle prime schermate (la Semina), oppure in Impostazioni ▸ Inviti nei primi 7 giorni di calendario, compreso il giorno in cui termini la Semina.</p>
-    <div class="box">
-      <div data-valid hidden>
-        <label for="code-it">Il tuo codice invito</label>
-        <input id="code-it" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-it">
-        <button type="button" data-copy="it">Copia codice</button>
-        <p id="hint-it" class="hint">Puoi anche tenere premuto sul codice per copiarlo. L’app ne verificherà la validità.</p>
-      </div>
-      <p data-fallback="it">Il codice non è visibile. Chiedi a chi ti ha invitato di inviarti anche il codice scritto.</p>
-      <p id="status-it" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
-    </div>
-    <noscript><p>Per mostrare il codice del link serve JavaScript. Puoi comunque installare l’app e chiedere il codice a chi ti ha invitato.</p></noscript>
-    <p><span class="store soon">Prossimamente su App Store</span></p>
-    <p><a data-open-app hidden>Ho già l’app: apri Grow Your Life</a></p>
-    <p class="hint">Per visitare un giardino, dopo l’installazione riapri questo link e tocca «Ho già l’app: apri Grow Your Life». Il limite di 7 giorni riguarda solo il codice invito.</p>
-    <p><a href="../privacy/">Informativa sulla privacy</a> · <a href="../">Supporto</a></p>
-  </section>
-
-  <section id="en" lang="en" aria-labelledby="title-en">
-    <h2 id="title-en">An invitation to grow your garden</h2>
-    <p id="visit-en" hidden>Already have the app? Open the garden with the button below and bring your bees. You’ll see plants and animals, never themes or activities.</p>
-    <p>1. Install Grow Your Life when it becomes available on the App Store.</p>
-    <p>2. If an invitation code appears here, enter it during setup, or in Settings ▸ Invitations within the first 7 calendar days, including the day you finish setup.</p>
-    <div class="box">
-      <div data-valid hidden>
-        <label for="code-en">Your invitation code</label>
-        <input id="code-en" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-en">
-        <button type="button" data-copy="en">Copy code</button>
-        <p id="hint-en" class="hint">You can also touch and hold the code to copy it. The app will check whether it is valid.</p>
-      </div>
-      <p data-fallback="en">The code is not visible. Ask the person who invited you to send you the code as text too.</p>
-      <p id="status-en" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
-    </div>
-    <noscript><p>JavaScript is needed to display the code from this link. You can still install the app and ask the person who invited you for the code.</p></noscript>
-    <p><span class="store soon">Coming soon on the App Store</span></p>
-    <p><a data-open-app hidden>Already installed: open Grow Your Life</a></p>
-    <p class="hint">To visit a garden, reopen this link after installation and tap “Already installed: open Grow Your Life”. The 7-day limit applies only to invitation codes.</p>
-    <p><a href="../privacy/#en">Privacy Policy</a> · <a href="../">Support</a></p>
-  </section>
-  <footer><p>Grow Your Life · Thomas Nadalet (Gusela Solutions) · Via Antole, 58 · 32100 Belluno (BL) · P.IVA IT01318470257</p><p>Ultimo aggiornamento: 13 ottobre 2026 · Last updated: 13 October 2026</p></footer>
+<main id="content">
+<h1>Grow Your Life</h1>
+<nav class="lang" aria-label="Lingua"><a href="#it" lang="it" hreflang="it" data-language="it">Italiano</a> · <a href="#en" lang="en" hreflang="en" data-language="en">English</a> · <a href="#es" lang="es" hreflang="es" data-language="es">Español</a> · <a href="#de" lang="de" hreflang="de" data-language="de">Deutsch</a> · <a href="#fr" lang="fr" hreflang="fr" data-language="fr">Français</a> · <a href="#pt" lang="pt-BR" hreflang="pt-BR" data-language="pt">Português</a></nav>
+<section id="it" lang="it" aria-labelledby="title-it">
+<h2 id="title-it">Un invito a far crescere il tuo giardino</h2>
+<p class="lead">Ogni parte della tua vita è una pianta del tuo giardino.</p>
+<p id="visit-it" hidden>Hai già l’app? Apri il giardino dal pulsante qui sotto e porta le tue api. Vedrai piante e animali, mai temi e attività.</p>
+<p>1. Installa Grow Your Life quando sarà disponibile sull’App Store.</p>
+<p>2. Se qui compare un codice invito, inseriscilo nelle prime schermate (la Semina), oppure in Impostazioni ▸ Inviti nei primi 7 giorni di calendario, compreso il giorno in cui termini la Semina.</p>
+<p>Visite e inviti sono disponibili dai 13 anni, con una fascia utilizzabile dalla domanda e, quando disponibile, da Apple; vale la più protetta. Senza fascia o sotto i 13 anni il link non permette di partecipare. Puoi correggere l’età in «Impostazioni» ▸ «Privacy» ▸ «La tua età». Prima di confermare un codice, preparare o condividere un invito o portare le prime api, l’app chiede «Regole delle visite e degli inviti»: «Accetto e continuo» prosegue, «Non ora» lascia tutto com’era. L’accettazione vale una volta per versione su questo telefono. Il giardino personale resta utilizzabile senza queste funzioni.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-it">Il tuo codice invito</label>
+    <input id="code-it" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-it">
+    <button type="button" data-copy="it">Copia codice</button>
+    <p id="hint-it" class="hint">Puoi anche tenere premuto sul codice per copiarlo. L’app ne verificherà la validità.</p>
+  </div>
+  <p data-fallback="it">In questo link manca il codice. Chiedi a chi ti ha invitato di inviarti il link completo o il codice scritto. Puoi comunque installare l’app quando sarà disponibile.</p>
+  <p id="status-it" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>Per mostrare il codice del link serve JavaScript. Puoi comunque leggere le istruzioni e chiedere il codice scritto a chi ti ha invitato.</p></noscript>
+<p><span class="store soon">Prossimamente su App Store</span></p>
+<p><a data-open-app hidden>Ho già l’app: apri Grow Your Life</a></p>
+<p class="hint">Per visitare un giardino, dopo l’installazione riapri questo link e tocca «Ho già l’app: apri Grow Your Life». Il limite di 7 giorni riguarda solo il codice invito. Il passaggio nell’App Store non trasferisce automaticamente il codice.</p>
+<p><a href="../">Supporto</a> · <a href="../privacy/">Informativa sulla privacy</a> · <a href="../regole/">Regole delle visite e degli inviti</a></p>
+<p class="date">Ultimo aggiornamento: 14 ottobre 2026</p>
+</section>
+<section id="en" lang="en" aria-labelledby="title-en">
+<h2 id="title-en">An invitation to grow your garden</h2>
+<p class="lead">Every part of your life is a plant in your garden.</p>
+<p id="visit-en" hidden>Already have the app? Open the garden with the button below and bring your bees. You’ll see plants and animals, never themes or activities.</p>
+<p>1. Install Grow Your Life when it becomes available on the App Store.</p>
+<p>2. If an invitation code appears here, enter it during setup, or in Settings ▸ Invitations within the first 7 calendar days, including the day you finish setup.</p>
+<p>Visits and invitations are available from age 13, with a usable range from the question and, where available, Apple; the more protective range applies. Without a range or below 13, the link does not allow participation. Correct your age in “Settings” ▸ “Privacy” ▸ “Your age”. Before confirming a code, preparing or sharing an invitation or bringing your first bees, the app asks for the “Rules for visits and invitations”: “Accept and continue” continues; “Not now” leaves things as they are. Acceptance applies once per version on this phone. Your personal garden remains available without these features.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-en">Your invitation code</label>
+    <input id="code-en" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-en">
+    <button type="button" data-copy="en">Copy code</button>
+    <p id="hint-en" class="hint">You can also touch and hold the code to copy it. The app will check whether it is valid.</p>
+  </div>
+  <p data-fallback="en">This link has no code. Ask the person who invited you for the complete link or the code as text. You can still install the app when it becomes available.</p>
+  <p id="status-en" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>JavaScript is needed to show the code from this link. You can still read the instructions and ask the person who invited you for the code as text.</p></noscript>
+<p><span class="store soon">Coming soon on the App Store</span></p>
+<p><a data-open-app hidden>Already installed: open Grow Your Life</a></p>
+<p class="hint">To visit a garden, reopen this link after installation and tap “Already installed: open Grow Your Life”. The 7-day limit applies only to invitation codes. Going through the App Store does not transfer the code automatically.</p>
+<p><a href="../en/">Support</a> · <a href="../privacy/en/">Privacy policy</a> · <a href="../regole/en/">Rules for visits and invitations</a></p>
+<p class="date">Last updated: 14 October 2026</p>
+</section>
+<section id="es" lang="es" aria-labelledby="title-es">
+<h2 id="title-es">Una invitación para hacer crecer tu jardín</h2>
+<p class="lead">Cada parte de tu vida es una planta de tu jardín.</p>
+<p id="visit-es" hidden>¿Ya tienes la app? Abre el jardín con el botón de abajo y lleva tus abejas. Verás plantas y animales, nunca temas ni actividades.</p>
+<p>1. Instala Grow Your Life cuando esté disponible en el App Store.</p>
+<p>2. Si aparece un código de invitación, introdúcelo durante la configuración inicial o en Ajustes ▸ Invitaciones durante los primeros 7 días naturales, incluido el día en que termines la configuración.</p>
+<p>Visitas e invitaciones están disponibles desde los 13 años, con una franja utilizable de la pregunta y, cuando está disponible, de Apple; vale la más protectora. Sin franja o por debajo de 13 años, el enlace no permite participar. Corrige tu edad en «Ajustes» ▸ «Privacidad» ▸ «Tu edad». Antes de confirmar un código, preparar o compartir una invitación o llevar las primeras abejas, la app pide las «Reglas de las visitas y las invitaciones»: «Aceptar y continuar» continúa; «Ahora no» deja todo como estaba. La aceptación vale una vez por versión en este teléfono. Tu jardín personal sigue disponible sin estas funciones.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-es">Tu código de invitación</label>
+    <input id="code-es" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-es">
+    <button type="button" data-copy="es">Copiar código</button>
+    <p id="hint-es" class="hint">También puedes mantener pulsado el código para copiarlo. La app comprobará su validez.</p>
+  </div>
+  <p data-fallback="es">Este enlace no tiene código. Pide a quien te invitó el enlace completo o el código por escrito. Podrás instalar la app cuando esté disponible.</p>
+  <p id="status-es" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>Se necesita JavaScript para mostrar el código del enlace. Puedes leer las instrucciones y pedir el código por escrito a quien te invitó.</p></noscript>
+<p><span class="store soon">Próximamente en el App Store</span></p>
+<p><a data-open-app hidden>Ya tengo la app: abrir Grow Your Life</a></p>
+<p class="hint">Para visitar un jardín, vuelve a abrir este enlace tras instalar y toca «Ya tengo la app: abrir Grow Your Life». El límite de 7 días solo afecta al código de invitación. Pasar por el App Store no transfiere el código automáticamente.</p>
+<p><a href="../es/">Ayuda</a> · <a href="../privacy/es/">Política de privacidad</a> · <a href="../regole/es/">Reglas de las visitas y las invitaciones</a></p>
+<p class="date">Última actualización: 14 de octubre de 2026</p>
+</section>
+<section id="de" lang="de" aria-labelledby="title-de">
+<h2 id="title-de">Eine Einladung, deinen Garten wachsen zu lassen</h2>
+<p class="lead">Jeder Bereich deines Lebens ist eine Pflanze in deinem Garten.</p>
+<p id="visit-de" hidden>Hast du die App schon? Öffne den Garten mit der Schaltfläche unten und bring deine Bienen mit. Du siehst Pflanzen und Tiere, niemals Themen oder Aktivitäten.</p>
+<p>1. Installiere Grow Your Life, sobald die App im App Store verfügbar ist.</p>
+<p>2. Wenn hier ein Einladungscode erscheint, gib ihn bei der Einrichtung oder unter Einstellungen ▸ Einladungen innerhalb der ersten 7 Kalendertage ein. Der Tag, an dem du die Einrichtung abschließt, zählt mit.</p>
+<p>Besuche und Einladungen sind ab 13 Jahren mit einer nutzbaren Altersgruppe aus der Frage und, soweit verfügbar, von Apple möglich; die stärker schützende Gruppe gilt. Ohne Altersgruppe oder unter 13 ermöglicht der Link keine Teilnahme. Korrigiere dein Alter unter „Einstellungen“ ▸ „Datenschutz“ ▸ „Dein Alter“. Vor dem Bestätigen eines Codes, Vorbereiten oder Teilen einer Einladung oder dem ersten Bienengeschenk fragt die App nach den „Regeln für Besuche und Einladungen“: „Akzeptieren und fortfahren“ setzt den Vorgang fort; „Nicht jetzt“ lässt alles unverändert. Die Annahme gilt einmal pro Version auf diesem Telefon. Dein persönlicher Garten bleibt ohne diese Funktionen nutzbar.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-de">Dein Einladungscode</label>
+    <input id="code-de" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-de">
+    <button type="button" data-copy="de">Code kopieren</button>
+    <p id="hint-de" class="hint">Du kannst den Code auch gedrückt halten, um ihn zu kopieren. Die App prüft seine Gültigkeit.</p>
+  </div>
+  <p data-fallback="de">Dieser Link enthält keinen Code. Bitte die einladende Person um den vollständigen Link oder den ausgeschriebenen Code. Du kannst die App installieren, sobald sie verfügbar ist.</p>
+  <p id="status-de" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>Um den Code aus dem Link anzuzeigen, wird JavaScript benötigt. Du kannst die Anleitung lesen und die einladende Person um den ausgeschriebenen Code bitten.</p></noscript>
+<p><span class="store soon">Demnächst im App Store</span></p>
+<p><a data-open-app hidden>App schon installiert: Grow Your Life öffnen</a></p>
+<p class="hint">Öffne diesen Link nach der Installation erneut und tippe auf „App schon installiert: Grow Your Life öffnen“, um einen Garten zu besuchen. Die 7-Tage-Frist gilt nur für Einladungscodes. Der Weg über den App Store überträgt den Code nicht automatisch.</p>
+<p><a href="../de/">Hilfe</a> · <a href="../privacy/de/">Datenschutzerklärung</a> · <a href="../regole/de/">Regeln für Besuche und Einladungen</a></p>
+<p class="date">Zuletzt aktualisiert: 14. Oktober 2026</p>
+</section>
+<section id="fr" lang="fr" aria-labelledby="title-fr">
+<h2 id="title-fr">Une invitation à faire grandir ton jardin</h2>
+<p class="lead">Chaque partie de ta vie est une plante de ton jardin.</p>
+<p id="visit-fr" hidden>Tu as déjà l’app ? Ouvre le jardin avec le bouton ci-dessous et apporte tes abeilles. Tu verras plantes et animaux, jamais les thèmes ou les activités.</p>
+<p>1. Installe Grow Your Life quand l’app sera disponible sur l’App Store.</p>
+<p>2. Si un code d’invitation apparaît ici, saisis-le pendant la configuration initiale ou dans Réglages ▸ Invitations pendant les 7 premiers jours calendaires, en comptant le jour où tu termines la configuration.</p>
+<p>Visites et invitations sont disponibles dès 13 ans, avec une tranche exploitable issue de la question et, si disponible, d’Apple ; la plus protectrice s’applique. Sans tranche ou avant 13 ans, le lien ne permet pas de participer. Corrige ton âge dans « Réglages » ▸ « Confidentialité » ▸ « Ton âge ». Avant de confirmer un code, de préparer ou partager une invitation ou d’apporter les premières abeilles, l’app demande les « Règles des visites et des invitations » : « Accepter et continuer » poursuit ; « Pas maintenant » laisse tout en l’état. L’acceptation vaut une fois par version sur ce téléphone. Ton jardin personnel reste disponible sans ces fonctions.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-fr">Ton code d’invitation</label>
+    <input id="code-fr" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-fr">
+    <button type="button" data-copy="fr">Copier le code</button>
+    <p id="hint-fr" class="hint">Tu peux aussi appuyer longuement sur le code pour le copier. L’app vérifiera sa validité.</p>
+  </div>
+  <p data-fallback="fr">Ce lien ne contient pas de code. Demande à la personne qui t’a invité le lien complet ou le code écrit. Tu pourras installer l’app dès sa disponibilité.</p>
+  <p id="status-fr" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>JavaScript est nécessaire pour afficher le code du lien. Tu peux lire les instructions et demander le code écrit à la personne qui t’a invité.</p></noscript>
+<p><span class="store soon">Bientôt sur l’App Store</span></p>
+<p><a data-open-app hidden>J’ai déjà l’app : ouvrir Grow Your Life</a></p>
+<p class="hint">Pour visiter un jardin, rouvre ce lien après installation et touche « J’ai déjà l’app : ouvrir Grow Your Life ». La limite de 7 jours concerne seulement le code d’invitation. Le passage par l’App Store ne transmet pas automatiquement le code.</p>
+<p><a href="../fr/">Assistance</a> · <a href="../privacy/fr/">Politique de confidentialité</a> · <a href="../regole/fr/">Règles des visites et des invitations</a></p>
+<p class="date">Dernière mise à jour : 14 octobre 2026</p>
+</section>
+<section id="pt" lang="pt-BR" aria-labelledby="title-pt">
+<h2 id="title-pt">Um convite para fazer seu jardim crescer</h2>
+<p class="lead">Cada parte da sua vida é uma planta do seu jardim.</p>
+<p id="visit-pt" hidden>Já tem o app? Abra o jardim pelo botão abaixo e leve suas abelhas. Você verá plantas e animais, nunca temas ou atividades.</p>
+<p>1. Instale o Grow Your Life quando estiver disponível na App Store.</p>
+<p>2. Se aparecer um código de convite, digite-o na configuração inicial ou em Ajustes ▸ Convites nos primeiros 7 dias corridos, contando o dia em que terminar a configuração.</p>
+<p>Visitas e convites estão disponíveis a partir dos 13 anos, com uma faixa utilizável da pergunta e, quando disponível, da Apple; vale a mais protetora. Sem faixa ou abaixo dos 13 anos, o link não permite participar. Corrija sua idade em “Ajustes” ▸ “Privacidade” ▸ “Sua idade”. Antes de confirmar um código, preparar ou compartilhar um convite ou levar as primeiras abelhas, o app pede as “Regras das visitas e dos convites”: “Aceitar e continuar” continua; “Agora não” deixa tudo como estava. A aceitação vale uma vez por versão neste telefone. Seu jardim pessoal continua disponível sem essas funções.</p>
+<div class="box">
+  <div data-valid hidden>
+    <label for="code-pt">Seu código de convite</label>
+    <input id="code-pt" class="code" readonly spellcheck="false" autocapitalize="characters" aria-describedby="hint-pt">
+    <button type="button" data-copy="pt">Copiar código</button>
+    <p id="hint-pt" class="hint">Você também pode tocar e segurar o código para copiá-lo. O app verificará se ele é válido.</p>
+  </div>
+  <p data-fallback="pt">Este link não tem código. Peça o link completo ou o código por escrito a quem convidou você. Você poderá instalar o app quando estiver disponível.</p>
+  <p id="status-pt" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript><p>É preciso JavaScript para mostrar o código do link. Você pode ler as instruções e pedir o código por escrito a quem convidou você.</p></noscript>
+<p><span class="store soon">Em breve na App Store</span></p>
+<p><a data-open-app hidden>Já tenho o app: abrir Grow Your Life</a></p>
+<p class="hint">Para visitar um jardim, reabra este link após instalar e toque em “Já tenho o app: abrir Grow Your Life”. O limite de 7 dias vale apenas para o código de convite. Passar pela App Store não transfere o código automaticamente.</p>
+<p><a href="../pt/">Ajuda</a> · <a href="../privacy/pt/">Política de privacidade</a> · <a href="../regole/pt/">Regras das visitas e dos convites</a></p>
+<p class="date">Última atualização: 14 de outubro de 2026</p>
+</section>
+<footer><p>Grow Your Life · Thomas Nadalet (Gusela Solutions) · Via Antole, 58 · 32100 Belluno (BL) · P.IVA IT01318470257 · <a href="mailto:info@gusela-solutions.it">info@gusela-solutions.it</a></p></footer>
 </main>
 </body>
 </html>
